@@ -4,3 +4,5 @@
 <h3>Elevating safety, mastering moderation and delivering endless fun – your Discord Server perfectly orchestrated by GuildGuru.</h3>
 
 ### Contributors : s0ul, ozo
+
+![image](https://github.com/selimozo/guildguru/assets/145379138/4bf2d71f-45ef-4c58-9cbf-042fdb3caaf5)
