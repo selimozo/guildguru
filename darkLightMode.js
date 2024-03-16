@@ -1,9 +1,23 @@
 const modeToggle = document.querySelector(".icon");
 const cc1 = document.getElementById("cc1");
 const cc2 = document.getElementById("cc2");
+const hamburger = document.querySelector(".hamburger")
+const navMenu = document.querySelector(".nav-menu")
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active")
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active")
+  navMenu.classList.remove("active")
+}))
+
 modeToggle.addEventListener("click", () =>
   document.body.classList.toggle("mode")
 );
+
 
 modeToggle.addEventListener(
   "click",
