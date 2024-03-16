@@ -4,7 +4,6 @@
 <h3>Elevating safety, mastering moderation and delivering endless fun – your Discord Server perfectly orchestrated by GuildGuru.</h3>
 
 ### Dark & Light mode
-<img src="./img-readme/mac1.png" height="210" align="left"/><img src="./img-readme/mac3.png" height="210"/>
-<img src="./img-readme/macl1.png" height="210" align="left"/><img src="./img-readme/macl3.png" height="210">
+<img src="./img-readme/gg-readme-gif.gif" height="300" align="left"/><img src="./img-readme/iphone1.png" height="300"/>
 <br/>
 ## Contributors : s0ul, ozo.
