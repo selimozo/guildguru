@@ -1,252 +1,358 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap");
 @font-face {
-    font-family: spincycle;
-    src: url(./fonts/spincycle.otf);
-  }
+  font-family: spincycle;
+  src: url(./fonts/spincycle.otf);
+}
 @font-face {
-    font-family: spincycle3d;
-    src: url(./fonts/spincycle3d.otf);
+  font-family: spincycle3d;
+  src: url(./fonts/spincycle3d.otf);
+}
+
+:root {
+  --c-text: white;
+  --c-background: hsl(200 20% 10%);
+  --titletext1: 0, 183, 255;
+  --titletext2: 226, 187, 187;
+  --cc-bg: rgb(31, 33, 41);
 }
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mode {
+  --c-text: black;
+  --c-background: #b5c0d0;
+  --titletext1: 37, 93, 108;
+  --titletext2: 30, 85, 184;
+  --cc-bg: rgb(166, 176, 191);
 }
 
 body {
-  background-color: hsl(200 20% 10%);
+  background-color: var(--c-background);
 }
 
 header {
-    width: 100%;
-    height: 80px;
-    background-color:hsl(236, 37%, 25%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    font-family: spincycle;
-
+  width: 100%;
+  height: 80px;
+  background-color: hsl(236, 37%, 25%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
 }
 
+#logo-container {
+  width: 800px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo {
+  width: 55px;
+}
 
-  #logo-container {
-    width: 600px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-  }
-  #logo {
-    width:60px;    
-  }
+#text-logo {
+  display: block;
+  width: 90%;
+  font-size: 35px;
+  text-align: center;
+  font-family: spincycle;
+  background: -webkit-linear-gradient(rgb(0, 183, 255), rgb(226, 187, 187));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  #text-logo {
-    display: block;
-    width: 90%;
-    font-size: 40px;
-    text-align: center;
-    font-family: spincycle3d;
+#text-logo:hover {
+  cursor: pointer;
+}
 
-    background: -webkit-linear-gradient(rgb(0, 183, 255), rgb(226, 187, 187));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-  }
+/* NAVBAR */
 
-  #text-logo:hover {
-    cursor: pointer;
-  }
-  
-  nav {
-    width: 600px;
-  }
-  
-  nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-inline-start: 0;
-    margin-block: 0;
-    height: 100%;
-  }
-  
-  nav > ul > li {
-    color:#dfdfe2 ;
-    margin: 0 0.2rem;
-    padding: 0.2rem;
-    display: block;
-  }
-  
-  nav > ul > li:hover {
-    background-color:#dfdfe2 ;
-    color: #1b1b32;
-    cursor: pointer;
-  }
-  
-  li > a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  main {
-    padding-top: 150px;
-    
-  }
+nav {
+  width: 800px;
+}
 
-  /* SECTIONS */
-  
-  section {
-    width: 80%;
-    margin: 0 auto 10px auto;
-    max-width: 900px;
-  }
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
 
-  #slogan {
-    display: block;
-    width: 100%;
-    font-size: 40px;
-    text-align: center;
-    font-family: anton;
-    background: -webkit-linear-gradient(rgb(0, 183, 255), rgb(226, 187, 187));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-  }
+nav > ul > li {
+  color: #e4e5f1;
+  display: block;
+}
 
-  #logo-font {
-    font-family: spincycle;
-  }
+nav > ul > li:hover {
+  /* background-color: #dfdfe2; */
+  color: #fff;
+  cursor: pointer;
+}
 
-  #slogan-p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 40px;
-    font-size: 16px;
-    text-align: center;
-    color: white;
-  }
-  #add-discord:link, #add-discord:visited {
-    background-color:#5a70c0;
-    color: whitesmoke;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 15px;
-    box-shadow: 1px 3px 1px skyblue;
-    transition: all 0.3s ease-out;
-  }
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
 
-  #add-discord:hover, #add-discord:active {
-    background-color:#7493d0;
-    scale:1.03;
-  }
+main {
+  padding-top: 150px;
+}
 
-  #link-section {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-  }
+/* SECTIONS */
 
-  .fa-discord {
-    padding-right:5px;
-  }
+section {
+  width: 100%;
+  margin: 0 auto 10px auto;
+  max-width: 1000px;
+}
 
-  .introduction-section {
-    padding-top:60px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+#slogan {
+  display: block;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  font-family: anton;
+  background: -webkit-linear-gradient(
+    rgb(var(--titletext1)),
+    rgb(var(--titletext2))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
 
-  .introduction-img {
-    width: 50%;
-    border-radius: 15px;
-    padding: 1px;
-    box-shadow: -3px -3px 4px wheat;
-  }
+#logo-font {
+  font-family: spincycle;
+  display: flex;
+  justify-content: center;
+}
 
-  .introduction-img:hover {
-    box-shadow: -3px -3px 8px wheat;
-    transition: all 0.1s ease-out;
-  }
+#slogan-p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 50px;
+  font-size: 17px;
+  text-align: center;
+  color: var(--c-text);
+  letter-spacing: 0.3px;
+}
 
-  .introduction-p {
-  padding-left: 50px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#slogan-span {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+#add-discord:link,
+#add-discord:visited {
+  background-color: #5a70c0;
   color: whitesmoke;
-  }
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 15px;
+  box-shadow: 1px 3px 1px skyblue;
+  transition: all 0.3s ease-out;
+  font-size: 20px;
+}
 
+#add-discord:hover,
+#add-discord:active {
+  background-color: #7493d0;
+  scale: 1.03;
+}
 
+#link-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
 
-  #add-server-section {
-    background-color: hsl(220 45% 30%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px 0;
-    margin-top: 60px;
-  }
+.fa-discord {
+  padding-right: 5px;
+}
 
-  #add-discord-bottom:link, #add-discord-bottom:visited {
-    background-color:#5a70c0;
-    color: whitesmoke;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 10px;
-    border: 1px solid #1b1b32;
-    transition: all 0.3s ease-out;
-  }
+.introduction-section {
+  padding-top: 60px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5em;
+}
 
-  #add-discord-bottom:hover, #add-discord-bottom:active {
-    background-color:#7493d0;
-  }
+.introduction-img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: -3px -3px 4px #7493d0;
+  margin: auto;
+}
 
-  #invite-us {
-    font-size: 30px;
-    padding: 10px;
-    color: #dfdfe2;
-    font-family: Anton;
-  }
+.introduction-img:hover {
+  box-shadow: -3px -3px 8px #7493d0;
+  transition: all 0.1s ease-out;
+}
 
-  #alt-invite-us {
-    padding: 0 10px 10px 10px;
-    font-size: 20px;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+.introduction-p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--c-text);
+  margin: auto;
+  padding-bottom: 10px;
+  word-wrap: break-word;
+  width: 100%;
+  letter-spacing: 0.3px;
+}
 
-  footer {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    background-color: hsl(200 20% 10%);
-    align-items: center;
-    justify-content:space-between;
-  }
+.check-commands-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  border-radius: 10%;
+  padding: 0 0 30px;
+}
 
-  footer ul {
-    list-style: none;
-    padding-inline-start: 0;
-    margin-block: 0;
-    height: 100%;
-    display: flex;
+#cc1 {
+  background-color: var(--cc-bg);
+  color: var(--c-text);
+}
+#cc2 {
+  background-color: var(--cc-bg);
+  color: var(--c-text);
+}
+.cc-image {
+  width: 80%;
+  margin: auto;
+}
 
-  }
+.cc-text {
+  padding: 0 50px;
+  letter-spacing: 0.6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 17px;
+  /* width: 100%; */
+  margin: auto;
+}
 
-  footer ul li {
-    font-family: Anton;
-    color:#dfdfe2 ;
-  }
+.cc-title {
+  text-shadow: 1px 1px 3px #5a70c0;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+  padding-bottom: 15px;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  width: 100%;
+  margin: auto;
+}
 
-  #footer-container {
-    width: 100%;
+.cc-a {
+  color: #2a6fbd;
+  transition: all 0.2s ease-out;
+  font-weight: bold;
+  text-decoration: none;
+}
+.cc-a:hover {
+  color: #7493d0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 4em;
+  padding: 70px 10px 10px;
+}
+strong {
+  display: flex;
+  padding: 5px 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.6px;
+}
+#add-server-section {
+  background-color: hsl(220 45% 30%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+#add-discord-bottom:link,
+#add-discord-bottom:visited {
+  background-color: #5a70c0;
+  color: whitesmoke;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  border: 1px solid #1b1b32;
+  transition: all 0.3s ease-out;
+}
+
+#add-discord-bottom:hover,
+#add-discord-bottom:active {
+  background-color: #7493d0;
+}
+
+#invite-us {
+  font-size: 30px;
+  padding: 10px;
+  color: #dfdfe2;
+  font-family: Anton;
+}
+
+#alt-invite-us {
+  padding: 0 10px 10px 10px;
+  font-size: 20px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  color: var(--c-text);
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+  display: flex;
+  text-align: center;
+}
+
+footer ul li {
+  font-family: Anton;
+  /* color: #dfdfe2; */
+}
+
+#footer-container {
+  width: 100%;
 }
 
 .li-container {
@@ -256,14 +362,36 @@ header {
   align-items: center;
 }
 
-.button-a:hover {
-  background-color:#dfdfe2 ;
-    color: #1b1b32;
+.button-a,
+.icon {
+  transition: all 0.1s ease-out;
+}
+.button-a:hover,
+.icon:hover {
+  color: #3994FF;
+  cursor: pointer;
 }
 
+#kitatura-span {
+  font-family: "Macondo Swash Caps";
+  letter-spacing: 0.2px;
+  font-size: 18px;
+}
 
-@media screen and (max-width: 750px) {
-  
+/* MEDIA QUERIES */
+
+@media (min-width: 1141px) and (max-width: 1350px) {
+  .grid-container {
+    width: 60%;
+  }
+}
+@media (min-width: 1041px) and (max-width: 1140px) {
+  .grid-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
   header {
     height: 100px;
   }
@@ -273,7 +401,8 @@ header {
   }
 
   #add-server-section {
-    padding: 20px;
+    padding: 40px;
+    font-size: 24px;
   }
 
   #invite-us {
@@ -289,84 +418,129 @@ header {
   }
 
   .introduction-section {
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .introduction-p {
+    margin: auto;
+    padding: 0 100px;
+    font-size: 20px;
   }
 
   .introduction-img {
-    width: 70%;
-  margin: auto;
+    width: 80%;
   }
 
-  .introduction-p {
-    margin: auto;
-    padding-right: 50px;
-    padding-top: 60px;
-    }
+  .grid-container {
+    width: 90%;
+  }
 
-    #slogan {
-      font-size: 35px;
-      padding: 0 10px;
-    }
+  .cc-image {
+    width: 80%;
+    /* height: 100%; */
+  }
 
-    #slogan-p {
-      padding: 40px 10px 0 10px;
-    }
+  strong {
+    font-size: 25px;
+    padding-bottom: 15px;
+  }
 
+  #slogan {
+    font-size: 45px;
+    padding: 0 20px;
+  }
 
+  #slogan-p {
+    padding: 40px 40px 0;
+    font-size: 24px;
+  }
+
+  #add-discord:link,
+  #add-discord:visited {
+    font-size: 26px;
+  }
+
+  footer {
+    padding: 50px 40px;
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 550px) {
-  
   header {
     height: 110px;
   }
 
   nav > ul {
-    flex-direction:column;
+    flex-direction: column;
   }
   nav > ul > li {
     font-size: 14px;
+    padding: 3px 0;
   }
 
   #logo {
     width: 60px;
   }
 
-  #text-logo {
-    font-size: 33px;
-  }
-  
-  #invite-us {
-    font-size: 22px;
+  #slogan {
+    font-size: 30px;
+    padding: 0 20px;
   }
 
-  footer ul li {
-    font-size: 14px;
+  #slogan-p {
+    padding: 40px 40px 0;
+    font-size: 16px;
   }
 
-}
-
-@media screen and (max-width: 400px) {
-  
-
-  #text-logo {
-    display: none;  
-  }
-  
-  #invite-us {
+  #add-discord:link,
+  #add-discord:visited {
     font-size: 20px;
   }
 
+  #text-logo {
+    font-size: 33px;
+  }
+
+  #invite-us {
+    font-size: 20px;
+  }
+  .introduction-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .introduction-p {
+    padding: 0 45px;
+    margin: auto;
+    font-size: 16px;
+  }
   footer {
-    padding: 60px 0;
+    height: auto;
   }
   footer ul {
-  flex-direction: column;
+    flex-direction: column;
   }
-
   footer ul li {
-    font-size: 15px;
-    padding: 2px 0;
+    padding-top: 10px;
+  }
+  strong {
+    padding-top: 5px;
+    font-size: 20px;
+  }
+  #add-discord-bottom {
+    font-size: 16px;
   }
 
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #text-logo {
+    display: none;
+  }
+  #invite-us {
+    font-size: 20px;
+  }
 }
