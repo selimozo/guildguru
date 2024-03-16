@@ -288,7 +288,7 @@ footer ul li {
   }
 
   .hamburger.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(3) {
@@ -300,17 +300,17 @@ footer ul li {
     left: -100%;
     top: 8%;
     z-index: -1;
-    background-color: #282B57 ;
+    background-color: #282b57;
     width: 50%;
     text-align: center;
     transition: 0.3s;
     padding-bottom: 80px;
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     padding-top: 80px;
     gap: 25px;
-  } 
+  }
 
   .nav-menu.active {
     left: 0;
@@ -326,10 +326,6 @@ footer ul li {
 
   header {
     height: 100px;
-  }
-
-  nav > ul {
-    flex-direction: column;
   }
 
   #add-server-section {
@@ -352,7 +348,6 @@ footer ul li {
 }
 
 @media screen and (max-width: 550px) {
-
   .nav-menu {
     gap: 15px;
     font-size: 20px;
@@ -393,10 +388,6 @@ footer ul li {
 }
 
 @media screen and (max-width: 400px) {
-  .nav-menu {
-    gap: 13px;
-    font-size: 21px;
-  }
   #text-logo {
     display: none;
   }
