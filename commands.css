@@ -66,6 +66,7 @@ header {
   background: -webkit-linear-gradient(rgb(0, 183, 255), rgb(226, 187, 187));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 5px;
 }
 
 #text-logo:hover {
